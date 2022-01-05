@@ -1,0 +1,29 @@
+If the problem is "main and master are entirely different commit histories.", the following will work
+
+git checkout master   
+git branch main master -f    
+git checkout main  
+git push origin main -f 
+
+pull er kheter:
+$ git pull origin master --allow-unrelated-histories
+
+-----github push------
+create a new repository on the command line
+
+echo "# acb" >> README.md
+git init
+git add .
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/muradahamed716/acb.git
+git push -u origin main
+
+…or push an existing repository from the command line
+git remote add origin https://github.com/muradahamed716/acb.git
+git branch -M main
+git push -u origin main
+
+
+git remote add origin 'your_url_name'
+git push -u origin master
