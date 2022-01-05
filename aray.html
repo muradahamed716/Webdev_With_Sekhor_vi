@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        
+       var car={
+           name: "BMW",//key:value 
+           Model: "X3",
+           Model_Year: "2021"
+       };
+       var numbers=new Array();
+        numbers.push(10);
+        numbers.push(20);
+        numbers.push(30);
+        /*for(var i=0;i<numbers.length;i++){
+            document.write(numbers[i]+'<br>');
+        }*/
+        for(x in numbers){
+            document.write(x+'<br>');//position
+            //index associative array
+            //array location:index
+            //array 
+            document.write(numbers[x]+'<br>');
+        }
+        for(x of numbers){
+            document.write(x+'<br>');
+            //index associative array
+            //array location:index
+            //array 
+           document.write(numbers[x]+'<br>');
+        }
+
+        /*var array = new Array(car);
+        for(x in array[0]){
+            document.write(array[0][x]+'<br>');
+           document.write(x+'<br>');
+            //document.write(x+'<br>');
+        }*/
+        for(x in car){
+            document.write(car[x]+'<br>');
+           document.write(x+'<br>');
+            //document.write(x+'<br>');
+        }
+
+
+        for(x of car){
+            //won't work in object
+           
+            document.write(x+'<br>');
+        }
+        //let var const
+        //strict mode
+        //ternary
+        //hoisting var const
+        //type conversion
+        //for in for off
+        //first theke switch
+       
+    </script>
+</body>
+</html>

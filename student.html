@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table{border-collapse: collapse;}
+        th,td{
+          padding:10px 20px;
+          border:1px solid black;
+          
+        }
+    </style>
+    
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <script>
+        class student {
+            constructor(firstName,lastName,gender,roll,studentId,clss,fatherName,motherName,
+            email,
+            dateOfBirth,
+            phoneNo,
+            address,
+            religion){
+                this.firstName = firstName;
+                this.lastName=lastName;
+                this.gender= gender;
+                this.roll= roll;
+                this.studentId= studentId;
+                this.clss=clss;
+                this.fatherName=fatherName;
+                this.motherName=motherName;
+                this.email=email;
+                this.dateOfBirth=dateOfBirth;
+                this.phoneNo=phoneNo;
+                this.address=address;
+                this.religion=religion;
+            }
+        }
+        var student1=new student("Shamim","Hossain","male",1,"std01","three","Abdul Hamid","Fatima","shamim@gmail.com","02.10.1998"
+        ,"017233823821","sanila,bera,Pabna","muslim");
+        console.log(student1.firstName);
+        
+        class techer{
+            constructor(firstName,
+            lastName,
+            fatherName,
+            motherName,
+            gender,
+            email,
+            joiningDate,
+            dateOfBirth,
+            phoneNo,
+            address,
+            religion,
+            Id,
+            subject,eduQuallification){
+                this.firstName = firstName;
+                this.lastName=lastName;
+                this.fatherName=fatherName;
+                this.motherName=motherName;
+                this.gender= gender;
+                this.email=email;
+                this.joiningDate=joiningDate;
+                this.dateOfBirth=dateOfBirth;
+                this.phoneNo=phoneNo;
+                this.address=address;
+                this.religion=religion;
+                this.Id= Id;
+                this.subject=subject;
+                this.eduQuallification=eduQuallification;
+            }
+        }
+        var teacher1=new techer(
+            "Abdul",
+            "Karim",
+            "Abdur Rahman",
+            "Habiba",
+            "male",
+            "abdulkarim@gmail.com",
+            "02.02.2024",
+            "02.03.1978",
+            "0923743244",
+            "Muslim",
+            "tu375343",
+            "Physics",
+            "Bsc,Msc,Phd"
+
+        );
+        var studenArray = new Array(student1);
+       var techerArray=new Array(teacher1)
+        console.log(studenArray[0]);
+
+        //creating table
+        var table=document.createElement('table');
+        var tbody=document.createElement('tbody');
+        //var row=document.createElement('tr');
+        //var data_1=document.createElement('td');
+        //var data_2=document.createElement('td');
+        
+      
+        table.appendChild(tbody);
+        //tbody.appendChild(row);
+        document.getElementById('body').appendChild(table);
+        
+        var row_1=document.createElement('tr');
+        var row_1_heading_1=document.createElement('th');
+        row_1_heading_1.innerHTML='AttributeName';
+        var row_1_heading_2=document.createElement('th');
+        row_1_heading_2.innerHTML='Value';
+        row_1.appendChild(row_1_heading_1);
+        row_1.appendChild(row_1_heading_2);
+        tbody.appendChild(row_1);
+        
+       var i=2;
+        for(x in studenArray[0]){
+
+        eval('var row_'+i+'= document.createElement("tr");')
+        eval('var row_'+i+'_data_1'+' = document.createElement("td");')
+         //var row_1_data_1=document.createElement('td');
+        eval('var row_'+i+'_data_2'+' = document.createElement("td");')
+        //var row_1_data_2=document.createElement('th');
+
+        eval('row_'+i+'_data_1'+'.innerHTML=x;')
+        //row_1_data_1.innerHTML='AttributeName';
+        eval('row_'+i+'_data_2'+'.innerHTML=studenArray[0][x];')
+        //row_1_data_2.innerHTML='Value';
+        eval('row_'+i+'.appendChild(row_'+i+'_data_1);')
+        //row_1.appendChild(row_1_data_1);
+        eval('row_'+i+'.appendChild(row_'+i+'_data_2);')
+        //row_1.appendChild(row_2_data_2);
+        eval('tbody.appendChild(row_'+i+');')
+        i++;
+        //tbody.appendChild(row_1);
+
+            //console.log(x);
+            //console.log(studenArray[0][x]);
+            
+            /*data_1.innerHTML=x;
+           console.log(data_1.innerHTML);
+            data_2.innerHTML=studenArray[0][x];
+            console.log(data_2.innerHTML);
+            eval('var row_'+i+' = document.createElement("tr");');
+            eval('row_'+i).appendChild(data_1);
+           
+            eval('row_'+i).appendChild(data_2);
+            
+            
+            console.log('row_2')
+            tbody.appendChild(eval("row_"+i));
+            console.log(eval("row_"+i));
+            i++;
+            */
+        }
+       
+    </script>
+    
+</body>
+</html>

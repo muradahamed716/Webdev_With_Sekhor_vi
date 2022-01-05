@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        //function declaration
+        function calcgrade(marks){
+            switch(true){
+                case (marks>= 80 && marks<=100):
+                    return "A+";break;
+                    case (marks >=70 && marks<=79):
+                    return "A";break;
+                    case (marks >=60 && marks<=69):
+                    return "A-";break;
+                    case(marks >=50 && marks<=59):
+                    return "B";break;
+                    case (marks>=40 && marks<=49):
+                    return "C";break;
+                    case (marks>=33 && marks<=39):
+                    return "D";break;
+                    case (marks<33 && marks>=0):
+                    return "F";break;
+                    case (marks>100 && marks<0):
+                    return "Invalid Number";break;
+                    
+                    default:
+                        return "Invalid Score";
+                    
+
+            }
+    
+        }
+        let marks=parseFloat(prompt("Enter Your Marks"));
+        //console.log(typeof marks);
+        //console.log(parseFloat(marks));
+        let grade=calcgrade(marks);
+        //let marks=80;
+    
+        
+            console.log(grade);
+        
+//function expressoion
+    let calcage=function(age){
+        return 2021-age;
+    }
+    let age1=calcage(1996);
+    console.log("age:"+age1);
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table{
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 10px 20px;
+            width: 50%;
+        }
+        tr,td,th{
+            border: 1px solid black;
+
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class student {
+            constructor(firstName,
+            lastName,
+            gender,
+            roll,
+            studentId,
+            clss,
+            fatherName,
+            motherName,
+            email,
+            dateOfBirth,
+            phoneNo,
+            address,
+            religion){
+                this.firstName = firstName;
+                this.lastName=lastName;
+                this.gender= gender;
+                this.roll= roll;
+                this.studentId= studentId;
+                this.clss=clss;
+                this.fatherName=fatherName;
+                this.motherName=motherName;
+                this.email=email;
+                this.dateOfBirth=dateOfBirth;
+                this.phoneNo=phoneNo;
+                this.address=address;
+                this.religion=religion;
+            }
+        }
+
+        var student1=new student("Shamim","Hossain","male",1,"std01","three","Abdul Hamid","Fatima","shamim@gmail.com","02.10.1998"
+        ,"017233823821","Kustia sadar,Kustia","muslim");
+        var student2=new student("Shahin","Hossain","male",2,"std02","three","Abdul Hamid","Fatima","shamim@gmail.com","02.10.1998"
+        ,"017233823822","Kustia sadar,Kustia","muslim");
+        var student3=new student("Sakib","Hossain","male",3,"std03","three","Abdul Hamid","Fatima","shamim@gmail.com","02.10.1998"
+        ,"017233823823","Kustia sadar,Kustia","muslim");
+        var student4=new student("Sakil","Hossain","male",4,"std04","three","Abdul Hamid","Fatima","shamim@gmail.com","02.10.1998"
+        ,"017233823824","Kustia sadar,Kustia","muslim");
+        var student5=new student("Akib","Hossain","male",5,"std05","three","Abdul Hamid","Fatima","shamim@gmail.com","02.10.1998"
+        ,"017233823825","Kustia sadar,Kustia","muslim");
+        var student6=new student("Habib","Hossain","male",6,"std06","three","Abdul Hamid","Fatima","shamim@gmail.com","02.10.1998"
+        ,"017233823826","Kustia sadar,Kustia","muslim");
+        var student7=new student("Halim","Hossain","male",7,"std07","three","Abdul Hamid","Fatima","shamim@gmail.com","02.10.1998"
+        ,"017233823827","Kustia sadar,Kustia","muslim");
+        var student8=new student("Amir","Hossain","male",8,"std08","three","Abdul Hamid","Fatima","shamim@gmail.com","02.10.1998"
+        ,"017233823828","Kustia sadar,Kustia","muslim");
+        var student9=new student("Nahid","Hossain","male",9,"std09","three","Abdul Hamid","Fatima","shamim@gmail.com","02.10.1998"
+        ,"017233823829","Kustia sadar,Kustia","muslim");
+        var student10=new student("konok","Hossain","male",10,"std10","three","Abdul Hamid","Fatima","shamim@gmail.com","02.10.1998"
+        ,"017233823810","Kustia sadar,Kustia","muslim");
+        var student11=new student("Rakib","Hossain","male",11,"std11","three","Abdul Hamid","Fatima","shamim@gmail.com","02.10.1998"
+        ,"017233823811","Kustia sadar,Kustia","muslim");
+        var student12=new student("Mahin","Hossain","male",12,"std12","three","Abdul Hamid","Fatima","shamim@gmail.com","02.10.1998"
+        ,"017233823812","Kustia sadar,Kustia","muslim");
+        var student13=new student("Mohsin","Hossain","male",13,"std13","three","Abdul Hamid","Fatima","shamim@gmail.com","02.10.1998"
+        ,"017233823813","Kustia sadar,Kustia","muslim");
+
+        var studentArray = [student1,student2,student3,student4,student5,student6,student7,student8,student9,student10,student11,student12,student13];
+        class teacher{
+            constructor(firstName,
+            lastName,
+            fatherName,
+            motherName,
+            gender,
+            email,
+            joiningDate,
+            dateOfBirth,
+            phoneNo,
+            address,
+            religion,
+            Id,
+            subject,eduQuallification,basicSalary){
+                this.firstName = firstName;
+                this.lastName=lastName;
+                this.fatherName=fatherName;
+                this.motherName=motherName;
+                this.gender= gender;
+                this.email=email;
+                this.joiningDate=joiningDate;
+                this.dateOfBirth=dateOfBirth;
+                this.phoneNo=phoneNo;
+                this.address=address;
+                this.religion=religion;
+                this.Id= Id;
+                this.subject=subject;
+                this.eduQuallification=eduQuallification;
+                this.basicSalary=basicSalary;
+            }
+            
+            calSalary(){
+                var hra=this.basicSalary*10/100;
+                var da=this.basicSalary*12/100;
+                var salary=this.basicSalary+hra+da;
+                //console.log(this.basicSalary);
+                document.write("Gross Salary = "+salary);
+
+            }
+        }
+        var teacher1=new teacher("Abdul","Karim","Abdur Rahman","Habiba",
+            "male","abdulkarim@gmail.com","02.02.2020","02.03.1978",
+            "0923743244","Courtpar, kustia","muslim","tu1","Physics","Bsc,Msc,phd",26000);
+
+        var teacher2=new teacher("Ahmed","Mustafa","Abdul Hamid","Keya","male",
+            "ahmedmustafa@gmail.com","01.02.2020","02.03.1977","0923743244",
+            "Courtpar, kustia","muslim","tu2","General Science","Bsc,Msc,Phd",26500);
+           
+            var teacher3=new teacher("Ahmed","Mustafa","Abdul Hamid","Keya","male",
+            "ahmedmustafa@gmail.com","01.02.2020","02.03.1977","0923743244",
+            "Courtpar, kustia","muslim","tu3","Bangla","Bss,Mss,Phd",27000);
+    
+            var teacher4=new teacher("Ahmed","Mustafa","Abdul Hamid","Keya","male",
+            "ahmedmustafa@gmail.com","01.02.2020","02.03.1977","0923743244",
+            "Courtpar, kustia","muslim","tu4","English","Bsc,Msc,Phd",27500);
+           
+            var teacher5=new teacher("Ahmed","Mustafa","Abdul Hamid","Keya","male",
+            "ahmedmustafa@gmail.com","01.02.2020","02.03.1977","0923743244",
+            "Courtpar, kustia","muslim","tu5","Mathematics","Bsc,Msc,Phd",28000);
+           
+            var teacher6=new teacher("Ahmed","Mustafa","Abdul Hamid","Keya","male",
+            "ahmedmustafa@gmail.com","01.02.2020","02.03.1977","0923743244",
+            "Courtpar, kustia","muslim","tu6","Mathematics","Bsc,Msc,Phd",29000);
+            var teacher7=new teacher("Ahmed","Mustafa","Abdul Hamid","Keya","male",
+            "ahmedmustafa@gmail.com","01.02.2020","02.03.1977","0923743244",
+            "Courtpar, kustia","muslim","tu7","Mathematics","Bsc,Msc,Phd",28500);
+            var teacher8=new teacher("Ahmed","Mustafa","Abdul Hamid","Keya","male",
+            "ahmedmustafa@gmail.com","01.02.2020","02.03.1977","0923743244",
+            "Courtpar, kustia","muslim","tu8","Mathematics","Bsc,Msc,Phd",26000);
+           
+            var teacher9=new teacher("Ahmed","Mustafa","Abdul Hamid","Keya","male",
+            "ahmedmustafa@gmail.com","01.02.2020","02.03.1977","0923743244",
+            "Courtpar, kustia","muslim","tu9","Mathematics","Bsc,Msc,Phd",26500);
+           
+            var teacher10=new teacher("Abdul","Jobbar","Abdur Rahman","Sreya","male",
+            "ahmedmustafa@gmail.com","01.02.2020","02.03.1977","0923743244",
+            "Courtpar, kustia","muslim","tu10","Chamestry","Bsc,Msc,Phd",27000);
+           
+            var teacher11=new teacher("Sofikul","Islam","Mahmud","Naila","male",
+            "sofikulislam@gmail.com","01.02.2020","02.03.1977","0923743204",
+            "Courtpar, kustia","muslim","tu11","Mathematics","Bsc,Msc,Phd",26000);
+        var teacherArray =[teacher1,teacher2,teacher3,teacher4,teacher5,teacher6,teacher8,teacher9,teacher10,teacher11];
+        teacherArray[0].calSalary();
+           //teacher1.calSalary();
+    </script>
+    <table>
+        <tr>
+            <th>Name</th>
+            <th>ID</th>
+        </tr>
+        <script>
+
+            for(var i=0;i<studentArray.length;i++){
+                document.write("<tr>");
+                document.write("<td>"+studentArray[i].firstName+" "+studentArray[i].lastName+"</td>");
+                document.write("<td>"+studentArray[i].studentId+"</td>");
+                document.write("</tr>");
+
+            }
+        </script>
+    </table>
+
+</body>
+</html>

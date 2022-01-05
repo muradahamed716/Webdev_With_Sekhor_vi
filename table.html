@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        table{border-collapse: collapse;}
+        th,td{
+          padding:10px 20px;
+          border:1px solid black;
+          
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body id="body">
+    <script>
+        var abc={
+            first:'akash'
+        };
+        var array=new Array(abc);
+        console.log(array);
+        var table=document.createElement('table');
+        var thead=document.createElement('thead');
+        var tbody=document.createElement('tbody');
+        table.appendChild(thead);
+        table.appendChild(tbody);
+        document.getElementById('body').appendChild(table);
+        //First row
+        var row_1=document.createElement('tr');
+        var heading_1=document.createElement('th');
+        heading_1.innerHTML='AttributeName';
+        var heading_2=document.createElement('th');
+        heading_2.innerHTML='Value';
+
+        row_1.appendChild(heading_1);
+        row_1.appendChild(heading_2);
+        thead.appendChild(row_1);
+        //second row
+        var row_2=document.createElement('tr');
+        var row_2_heading_1=document.createElement('td');
+        row_2_heading_1.innerHTML=array[0].first;
+        var row_2_heading_2=document.createElement('td');
+        row_2_heading_2.innerHTML='Value';
+
+        row_2.appendChild(row_2_heading_1);
+        row_2.appendChild(row_2_heading_2);
+        tbody.appendChild(row_2);
+        //third row
+        var row_2=document.createElement('tr');
+        var row_2_heading_1=document.createElement('td');
+        row_2_heading_1.innerHTML='AttributeName';
+        var row_2_heading_2=document.createElement('td');
+        row_2_heading_2.innerHTML='Value';
+
+        row_2.appendChild(row_2_heading_1);
+        row_2.appendChild(row_2_heading_2);
+        tbody.appendChild(row_2);
+        //4th
+        var row_2=document.createElement('tr');
+        var row_2_heading_1=document.createElement('td');
+        row_2_heading_1.innerHTML='AttributeName';
+        var row_2_heading_2=document.createElement('td');
+        row_2_heading_2.innerHTML='Value';
+
+        row_2.appendChild(row_2_heading_1);
+        row_2.appendChild(row_2_heading_2);
+        tbody.appendChild(row_2);
+        //5th
+        var row_2=document.createElement('tr');
+        var row_2_heading_1=document.createElement('td');
+        row_2_heading_1.innerHTML='AttributeName';
+        var row_2_heading_2=document.createElement('td');
+        row_2_heading_2.innerHTML='Value';
+
+        row_2.appendChild(row_2_heading_1);
+        row_2.appendChild(row_2_heading_2);
+        tbody.appendChild(row_2);
+
+        //6th
+        var row_2=document.createElement('tr');
+        var row_2_heading_1=document.createElement('td');
+        row_2_heading_1.innerHTML='AttributeName';
+        var row_2_heading_2=document.createElement('td');
+        row_2_heading_2.innerHTML='Value';
+
+        row_2.appendChild(row_2_heading_1);
+        row_2.appendChild(row_2_heading_2);
+        tbody.appendChild(row_2);
+        //7th
+        var row_2=document.createElement('tr');
+        var row_2_heading_1=document.createElement('td');
+        row_2_heading_1.innerHTML='AttributeName';
+        var row_2_heading_2=document.createElement('td');
+        row_2_heading_2.innerHTML='Value';
+
+        row_2.appendChild(row_2_heading_1);
+        row_2.appendChild(row_2_heading_2);
+        tbody.appendChild(row_2);
+        //8th
+        var row_2=document.createElement('tr');
+        var row_2_heading_1=document.createElement('td');
+        row_2_heading_1.innerHTML='AttributeName';
+        var row_2_heading_2=document.createElement('td');
+        row_2_heading_2.innerHTML='Value';
+
+        row_2.appendChild(row_2_heading_1);
+        row_2.appendChild(row_2_heading_2);
+        tbody.appendChild(row_2);
+        //9th
+        var row_2=document.createElement('tr');
+        var row_2_heading_1=document.createElement('td');
+        row_2_heading_1.innerHTML='AttributeName';
+        var row_2_heading_2=document.createElement('td');
+        row_2_heading_2.innerHTML='Value';
+
+        row_2.appendChild(row_2_heading_1);
+        row_2.appendChild(row_2_heading_2);
+        tbody.appendChild(row_2);
+
+        //10th
+        var row_2=document.createElement('tr');
+        var row_2_heading_1=document.createElement('td');
+        row_2_heading_1.innerHTML='AttributeName';
+        var row_2_heading_2=document.createElement('td');
+        row_2_heading_2.innerHTML='Value';
+
+        row_2.appendChild(row_2_heading_1);
+        row_2.appendChild(row_2_heading_2);
+        tbody.appendChild(row_2);
+
+    </script>
+</body>
+</html>

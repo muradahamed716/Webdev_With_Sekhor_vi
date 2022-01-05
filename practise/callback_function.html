@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback function</title>
+</head>
+<body>
+    <script>
+        /*let displayage=function(age){
+            console.log(age);
+
+        }
+        let calcage=function(birthyear)
+         {var age= 2021-birthyear;
+            displayage(age);
+        }
+        calcage(1996);*/
+
+        let displayage=function(age){
+            console.log(age);
+
+        }
+        let calcage=function(birthyear,displayfunction)
+         {var age= 2021-birthyear;
+            displayfunction(age);
+        }
+        calcage(1996,displayage);
+    </script>
+</body>
+</html>

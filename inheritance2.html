@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Vehicle{
+            constructor(noOfWhell,noOfGlass,noOfDoor){
+                this.noOfWhell=noOfWhell;
+                this.noOfGlass=noOfGlass;
+                
+                this.noOfDoor=noOfDoor;
+            }   
+        }
+        class Car extends Vehicle{
+            constructor(noOfWhell,noOfGlass,noOfPeopleCanTransport,noOfDoor,brand,model){
+                super(noOfWhell,noOfGlassnoOfDoor);
+                this.brand=brand;
+                this.model=model;
+                this.noOfPeopleCanTransport=noOfPeopleCanTransport;
+            }
+        }
+        class Truck extends Vehicle{
+            constructor(noOfWhell,noOfGlass,noOfDoor,weightCanTransport){
+                super(noOfWhell,noOfGlass,noOfDoor);
+                this.weightCanTransport=weightCanTransport;
+            }
+        }
+        class Bus extends Vehicle{
+            constructor(noOfWhell,noOfGlass,noOfDoor,noOfPeopleCanTransport){
+                super(noOfWhell,noOfGlass,noOfDoor);
+                this.noOfPeopleCanTransport=noOfPeopleCanTransport;
+            }
+        }
+        let bus1=new Bus(12,24,2,60);
+        document.write("Bus1 can transport "+bus1.noOfPeopleCanTransport+" people at a time");
+
+
+
+
+
+        class Animal{
+            constructor(noOfLegs,size,weight,color){
+                this.noOfLegs=noOfLegs;
+                this.size=size;
+                this.weight=weight;
+                this.color=color;
+            }
+        }
+        class Cat extends Animal{
+            constructor(noOfLegs,size,weight,color){
+                super(noOfLegs,size,weight,color);
+            }
+        }
+        class Dog extends Animal{
+            constructor(noOfLegs,size,weight,color){
+                super(noOfLegs,size,weight,color);
+            }
+        }
+        class ShapeCalculation{
+            constructor(length,width,height,radius,base){
+                this.length=length;
+                this.width=width;
+                this.radius=radius;
+                this.base=base;
+            }
+           //area()
+            
+        }
+         class Square extends ShapeCalculation{
+               constructor(length){
+                   super(length);
+               }
+            }
+           class Triangle extends ShapeCalculation{
+                constructor(height,base){
+                    super(height,base);
+                }
+            }
+            class Rectangle extends ShapeCalculation{
+                constructor(length,width){
+                    super(length,width);
+                }
+            }
+            class Circle extends ShapeCalculation{
+                constructor(radius){
+                    super(radius);
+                }
+                perimeter(){
+                    let peri=2*3.1416*this.radius;
+                    document.write("Circumstance of the radius is "+peri);
+                }
+            }
+       
+    </script>
+</body>
+</html>

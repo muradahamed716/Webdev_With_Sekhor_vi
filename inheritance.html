@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class Person{
+            constructor(firstName,lastName,gender,address){
+                this.firstName= firstName;
+                this.lastName= lastName;
+                this.gender= gender;
+                this.address= address;
+            }
+            greet(){
+                document.write("Hello from "+this.firstName);
+            }
+        }
+        //var student= new Person("a","b","m","s");
+        //student.greet();
+       class Student extends Person{
+            constructor(firstName,lastName,gender,address,roll,clss){
+                super(firstName,lastName,gender,address);
+                this.roll=roll;
+                this.clss=clss;
+            }
+        }
+        var student1=new Student("Shamim","Hossain","Male","6 Road,Gazipur",12,"Three");
+        document.write(student1.firstName);
+        student1.greet();
+        
+ 
+        //extends keyword
+        //super keyword
+        //this
+        //salary calculation
+        //super animal 4,5 sub cat dog
+        //shape calculation triangle, area calculation
+        //vehicle car truck method
+        //class array loop prime fabonacci 
+        //reverse star peramid pascal triangle perfect number pallindrome     
+        //
+    </script>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //class is a blue print /template of object object factory
+        //object instance of a class
+        class Student {
+            //prperty and method
+            //constructor :class level variabel intialization
+            constructor(name,id){
+                //this.x=name;//class.level_variable=parameter
+                //this.y=id;
+                 this.name=name;//class.level_variable=parameter
+                this.id=id;
+            }
+        }
+        var std1= new Student('Sakib',0001);
+        //document.write(std1.x+'<br>');
+        //document.write(std1.y+'<br>');
+        document.write(std1.name+'<br>');
+        document.write(std1.id+'<br>');
+        var std2= new Student('Kabil',0002);
+        document.write(std2.name+'<br>');
+        document.write(std2.id+'<br>');
+
+        //this 
+        //constructor
+        //js akta class e koto gula consrtuctor toiri kora ji
+        //class student with 10 objects
+        //teacher class no array no table
+        //10 object to array
+        //show in table
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let portpolioGenerator=
+        (name,birthYear,highestEducationLevel)=>{
+            
+            const date= new Date();
+          
+            let age=(date.getFullYear())-birthYear;
+           // console.log(age);
+           return ` My Name is ${name} I am ${age} years old  My educationlevel is ${highestEducationLevel}`;
+        }
+        //portpolioGenerator(1,1996,1);
+        console.log(portpolioGenerator("A",1996,"HSC"))
+    </script>
+</body>
+</html>
