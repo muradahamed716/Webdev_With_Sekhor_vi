@@ -36,7 +36,11 @@
                let message=`Order received.${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`;
                console.log(message);
 
-            }
+            },
+            customizablePizza:function(ing1,ing2,ing3){
+                const pizza=`order received.Your pizza with ${ing1} and ${ing2} and ${ing3} will be delivered soon`;
+                console.log(pizza);
+            },
         }
                 //assingment practise with switching variable
         let main,secondary;
@@ -94,13 +98,24 @@
         //     mainIndex:0,
         //  };
         //  restaurant.orderDelivery(newObj);
-        
+
          restaurant.orderDelivery({
             time:'20:00',
             address:'van delro 20',
             starterIndex:2,
             mainIndex:0,
          });
+
+         //spread operator 
+         const copyRestaurant={...restaurant};
+         copyRestaurant.ownerName='Savage Kingdom';
+         console.log(copyRestaurant);  
+
+
+         //  passing multiple value into a opertor
+         const ingridients=['a','b','c'];
+         restaurant.customizablePizza(...ingridients);
+
 
     </script>
 </body>
