@@ -8,16 +8,7 @@
 </head>
 <body>
     <script>
-        const restaurant = {
-            name: 'Classico Italiano',
-            location: 'Via Angelo Tavanti 23, Firenze, Italy',
-            categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
-            starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
-            mainMenu: ['Pizza', 'Pasta', 'Risotto'],
-            order:function(starterIndex,mainIndex){
-                return [this.starterMenu[starterIndex],this.mainMenu[mainIndex]];
-            },
-            openingHours:{
+         openingHours={
                 sun:{
                     open:12,close:24
                 },
@@ -26,17 +17,36 @@
                 },
                 sat:{
                     open:11,close:23
-                }
-            },
+                },
+                mon:{
+                    open:10,close:13,
+                },
+
+            };
+        const restaurant = {
+            name: 'Classico Italiano',
+            location: 'Via Angelo Tavanti 23, Firenze, Italy',
+            categories: ['Italian', 'Pizzeria', 'Vegetarian', 'Organic'],
+            starterMenu: ['Focaccia', 'Bruschetta', 'Garlic Bread', 'Caprese Salad'],
+            mainMenu: ['Pizza', 'Pasta', 'Risotto'],
+            order:function(starterIndex,mainIndex){
+                return [this.starterMenu[starterIndex],this.mainMenu[mainIndex]];
+            },openingHours,
 
 
             //destructureing in function
-            orderDelivery:function({address,time='18:00',mainIndex=0,starterIndex=0}){
+            orderDelivery({address,time='18:00',mainIndex=0,starterIndex=0}){
                 console.log(address,time,mainIndex,starterIndex);
                let message=`Order received.${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`;
                console.log(message);
 
             },
+            // orderDelivery:function({address,time='18:00',mainIndex=0,starterIndex=0}){
+            //     console.log(address,time,mainIndex,starterIndex);
+            //    let message=`Order received.${this.starterMenu[starterIndex]} and ${this.mainMenu[mainIndex]} will be delivered to ${address} at ${time}`;
+            //    console.log(message);
+
+            // },
             customizablePizza:function(ing1,ing2,ing3){
                 const pizza=`order received.Your pizza with ${ing1} and ${ing2} and ${ing3} will be delivered soon`;
                 console.log(pizza);
@@ -83,8 +93,9 @@
 
         
         //nested objects
-        const {fri}=restaurant.openingHours;
+        const {fri}=restaurant.openingHours; 
         console.log(fri);
+       //object name variable name same hote hobe
          const {fri:{
             open,close
          }}=restaurant.openingHours;
@@ -106,15 +117,28 @@
             mainIndex:0,
          });
 
-         //spread operator 
+
+         
+         //  passing multiple value into a function
+         const ingridients=['a','b','c'];
+         restaurant.customizablePizza(...ingridients);
+
+
+         //spread operator because on the right side of the =
          const copyRestaurant={...restaurant};
          copyRestaurant.ownerName='Savage Kingdom';
          console.log(copyRestaurant);  
 
+        //REST, because on the left side of the opertor
+        const [pizza,pasta,...otherMenu]=[...restaurant.mainMenu,...restaurant.starterMenu];
+        console.log(pizza,pasta,otherMenu);
 
-         //  passing multiple value into a opertor
-         const ingridients=['a','b','c'];
-         restaurant.customizablePizza(...ingridients);
+         //rest in object
+
+        //  const {friDay,weekDays}=restaurant.openingHours; object propery name match korte hobe j mon fri,sun
+         //console.log(friDay,weekDays);
+         const {sat,mon,...weekDays}=restaurant.openingHours; 
+         console.log(sat,mon,weekDays);
 
 
     </script>
