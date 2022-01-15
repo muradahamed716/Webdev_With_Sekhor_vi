@@ -52,8 +52,14 @@ const game = {
   printGoals(...numbers){
       console.log(numbers);
       console.log(`${numbers.length} goals scored`);
+  },
+  goalScorersNameEntry(...scorerName){
+   for(const player of scorerName){
+    this.goalScorers[player]?this.goalScorers[player]++:this.goalScorers[player]=1;
+   };
+  
   }
-};
+}
 //  Challnge #1
 // We're building a football betting app (soccer for my American friends 😅)!
 
@@ -151,6 +157,27 @@ for ([team,value] of odd){
 //       }
 
 // GOOD LUCK 😀
+const scorers = {};
+for (const player of game.scored) {
+  scorers[player] ? scorers[player]++ : (scorers[player] = 1);
+};
+
+scorers.name='ASA';
+console.log(scorers);
+
+ game.goalScorers={};
+ 
+   
+ 
+ game.goalScorersNameEntry('Oxigen','Hidrogen','Carbon','Carbon');
+ console.log(game.goalScorers);
+// for(player of game.scored){
+//   game.goalScorers[player]?game.goalScorers[player]++:game.goalScorers[player]=1;
+  
+// }
+// console.log(game.goalScorers);
+
+
 
     </script>
 </body>
