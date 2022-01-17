@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+      //Set is a collection of unique elements
+      const menu=['pizza','bread','salad','pizza'];
+      const uniqueMenu=new Set(['pizza', 'bread', 'salad', 'pizza']);
+      uniqueMenu.add('garlik');
+      console.log(uniqueMenu.delete('pizza'))
+      console.log(uniqueMenu.has('pizza'))
+      console.log(uniqueMenu.size);
+// uniqueMenu.clear();
+        console.log(uniqueMenu);
+        
+    //   function a (menu){
+    //     console.log(menu)
+    //   }
+    //   a({c:[a= 1, b= 3],a:1,b:3,
+    //   })
+            ///////////////Maps////////////////
+        const quiz=new Map([
+        ['Question','What\'s the best programming language in the world?'],
+        [1,'C'],
+        [2,'Java'],
+        [3,'JavaScript'],
+        ['Correct',3],
+        [true,'Success🎉'],
+        [false,'Try again!'],
+        ]);
+        console.log(quiz.get('Question'));
+        for (let [key,value] of quiz){
+            typeof key==='number' && console.log(`Answer ${key}: ${value}`)
+        }
+      // const answer=Number(prompt('Enter Answer'));
+      const answer=3;
+       console.log(answer);
+        console.log(quiz.get(answer===quiz.get('Correct')));
+       console.log([...quiz]);
+    </script>
+</body>
+</html>
