@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function vowelCount(str) {
+            let strCount = 0;
+            const characters = [...str];
+            for (const item of characters) {
+                if (item === 'a' || item === 'e' || item === 'i' || item === 'o' || item === 'u') strCount++;
+
+            }
+            return strCount;
+        }
+        vowelCount('abcoi');
+        let a = (10).toString(10)
+        let b = 1023 % 2;
+        console.log(a, b);
+
+
+
+        function addBinary(a, b) {
+            let sum = a + b;
+            return sum.toString(2)
+        }
+        console.log(addBinary(1, 1))
+
+
+        //Binary conversion alternative way
+        function covertToBinary(number) {
+            let rem = null, binary = 0, position = 1;
+            while (number != 0) {
+                rem = number % 2;
+                number = parseInt(number / 2);
+                binary = binary + rem * position;
+                position = postion * 10;
+            }
+            return binary;
+        }
+        convertToBinary(2)
+    </script>
+</body>
+
+</html>

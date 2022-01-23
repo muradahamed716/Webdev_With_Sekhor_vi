@@ -36,7 +36,8 @@
             }
     
         }
-        let marks=parseFloat(prompt("Enter Your Marks"));
+                //let marks=parseFloat(prompt("Enter Your Marks"));
+                let marks = 89;
         //console.log(typeof marks);
         //console.log(parseFloat(marks));
         let grade=calcgrade(marks);
@@ -52,6 +53,20 @@
     let age1=calcage(1996);
     console.log("age:"+age1);
 
+
+    //function returning function
+    // let greet = greeting => { return name => console.log(`${greeting} ${name}`) };
+    // greet('hey')('Samim');
+    let greet = greeting => name => console.log(`${greeting} ${name}`);
+    greet('hey')('jonas');
+
+    let name = 'jonas'; const obj = { name };
+    console.log(obj)
+    //partial application without bind
+
+    let addtax = tax => value => console.log(value = value + value * tax)
+    let addVAT = addTax(0.23);
+    addVAT(230);
     </script>
 </body>
 </html>
