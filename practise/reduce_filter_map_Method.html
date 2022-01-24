@@ -19,6 +19,24 @@
         console.log(newArr)
         //.map method returns new array
         //this method can be chained with other array methods
+                    let obj = {
+                        'catName--2': 'laby',
+
+                    }
+                    let string = 'Name';
+                    let a = 2;
+                    console.log(obj[`cat${string}--${a}`]);
+
+                    function doubleEveryOther(a) {
+                        // let doubles = a;
+                        // a.map(function (val, i, arr) {
+                        //     if (i % 2 !== 0) doubles[i] = val * 2;
+                        // });
+                        // return doubles;
+                        let doubles = a.map((val, i) => (i % 2 === 0) ? val : val * 2)
+                        return doubles
+                    }
+                    console.log(doubleEveryOther([1, 2, 3, 4]))
     </script>
 </body>
 
