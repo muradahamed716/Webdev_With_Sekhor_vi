@@ -21,3 +21,5 @@ console.log(8**(1/3))
 //gettin a random number between two value
 const randB2Value=(max,min)=>Math.floor(Math.random()*(max-min)+1)+min;
 console.log(randB2Value(10,20))
+
+//
