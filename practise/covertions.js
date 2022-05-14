@@ -25,3 +25,6 @@ const object2={
 }
 const arr3=Object.entries(object2)
 console.log(arr3)
+//////object to Map
+const map4= new Map(Object.entries(object2))
+console.log(map4)
